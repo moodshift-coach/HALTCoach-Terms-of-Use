@@ -8,638 +8,638 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0A0A0F;
-    --bg3: #13131E;
-    --green: #00C896;
-    --green-dim: rgba(0,200,150,0.12);
-    --green-glow: rgba(0,200,150,0.25);
-    --border: rgba(0,200,150,0.15);
-    --border-subtle: rgba(255,255,255,0.06);
-    --text: #E8E8F0;
-    --text-secondary: #8888AA;
-    --text-dim: #555570;
-    --card-bg: rgba(255,255,255,0.03);
-  }
+:root {
+--bg: #0A0A0F;
+--bg3: #13131E;
+--green: #00C896;
+--green-dim: rgba(0,200,150,0.12);
+--green-glow: rgba(0,200,150,0.25);
+--border: rgba(0,200,150,0.15);
+--border-subtle: rgba(255,255,255,0.06);
+--text: #E8E8F0;
+--text-secondary: #8888AA;
+--text-dim: #555570;
+--card-bg: rgba(255,255,255,0.03);
+}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-  }
+body {
+background: var(--bg);
+color: var(--text);
+font-family: 'DM Sans', sans-serif;
+font-size: 15px;
+line-height: 1.7;
+min-height: 100vh;
+-webkit-font-smoothing: antialiased;
+}
 
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(0,200,150,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,200,150,0.03) 1px, transparent 1px);
-    background-size: 48px 48px;
-    pointer-events: none;
-    z-index: 0;
-  }
+body::before {
+content: '';
+position: fixed;
+inset: 0;
+background-image:
+linear-gradient(rgba(0,200,150,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,200,150,0.03) 1px, transparent 1px);
+background-size: 48px 48px;
+pointer-events: none;
+z-index: 0;
+}
 
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 1;
-  }
+.container {
+max-width: 720px;
+margin: 0 auto;
+padding: 0 20px;
+position: relative;
+z-index: 1;
+}
 
-  header {
-    padding: 48px 0 40px;
-    border-bottom: 1px solid var(--border-subtle);
-    margin-bottom: 48px;
-  }
+header {
+padding: 48px 0 40px;
+border-bottom: 1px solid var(--border-subtle);
+margin-bottom: 48px;
+}
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 32px;
-    text-decoration: none;
-  }
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 32px;
+text-decoration: none;
+}
 
-  .logo-icon {
-    width: 36px;
-    height: 36px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3px;
-  }
+.logo-icon {
+width: 36px;
+height: 36px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3px;
+}
 
-  .logo-icon span {
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 8px;
-    font-weight: 600;
-    color: var(--bg);
-    font-family: 'DM Mono', monospace;
-  }
+.logo-icon span {
+border-radius: 3px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 8px;
+font-weight: 600;
+color: var(--bg);
+font-family: 'DM Mono', monospace;
+}
 
-  .logo-icon span:nth-child(1) { background: var(--green); }
-  .logo-icon span:nth-child(2) { background: rgba(0,200,150,0.75); }
-  .logo-icon span:nth-child(3) { background: rgba(0,200,150,0.75); }
-  .logo-icon span:nth-child(4) { background: rgba(0,200,150,0.5); }
+.logo-icon span:nth-child(1) { background: var(--green); }
+.logo-icon span:nth-child(2) { background: rgba(0,200,150,0.75); }
+.logo-icon span:nth-child(3) { background: rgba(0,200,150,0.75); }
+.logo-icon span:nth-child(4) { background: rgba(0,200,150,0.5); }
 
-  .logo-text { font-size: 17px; font-weight: 600; color: var(--text); letter-spacing: -0.02em; }
-  .logo-sub { font-size: 11px; color: var(--green); font-weight: 400; letter-spacing: 0.04em; font-family: 'DM Mono', monospace; }
+.logo-text { font-size: 17px; font-weight: 600; color: var(--text); letter-spacing: -0.02em; }
+.logo-sub { font-size: 11px; color: var(--green); font-weight: 400; letter-spacing: 0.04em; font-family: 'DM Mono', monospace; }
 
-  .page-title {
-    font-size: clamp(32px, 6vw, 48px);
-    font-weight: 300;
-    letter-spacing: -0.03em;
-    line-height: 1.15;
-    margin-bottom: 12px;
-  }
+.page-title {
+font-size: clamp(32px, 6vw, 48px);
+font-weight: 300;
+letter-spacing: -0.03em;
+line-height: 1.15;
+margin-bottom: 12px;
+}
 
-  .page-title em { font-style: italic; color: var(--green); text-shadow: 0 0 40px var(--green-glow); }
+.page-title em { font-style: italic; color: var(--green); text-shadow: 0 0 40px var(--green-glow); }
 
-  .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 
-  .meta-badge {
-    font-size: 11px;
-    font-family: 'DM Mono', monospace;
-    color: var(--text-secondary);
-    background: var(--card-bg);
-    border: 1px solid var(--border-subtle);
-    border-radius: 4px;
-    padding: 4px 10px;
-  }
+.meta-badge {
+font-size: 11px;
+font-family: 'DM Mono', monospace;
+color: var(--text-secondary);
+background: var(--card-bg);
+border: 1px solid var(--border-subtle);
+border-radius: 4px;
+padding: 4px 10px;
+}
 
-  .meta-badge.green { color: var(--green); border-color: var(--border); background: var(--green-dim); }
+.meta-badge.green { color: var(--green); border-color: var(--border); background: var(--green-dim); }
 
-  .lang-tabs {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 48px;
-    background: var(--bg3);
-    border: 1px solid var(--border-subtle);
-    border-radius: 10px;
-    padding: 4px;
-  }
+.lang-tabs {
+display: flex;
+gap: 4px;
+margin-bottom: 48px;
+background: var(--bg3);
+border: 1px solid var(--border-subtle);
+border-radius: 10px;
+padding: 4px;
+}
 
-  .lang-tab {
-    flex: 1;
-    padding: 9px;
-    border: none;
-    border-radius: 7px;
-    background: transparent;
-    color: var(--text-secondary);
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-    letter-spacing: 0.04em;
-  }
+.lang-tab {
+flex: 1;
+padding: 9px;
+border: none;
+border-radius: 7px;
+background: transparent;
+color: var(--text-secondary);
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.2s;
+letter-spacing: 0.04em;
+}
 
-  .lang-tab:hover { color: var(--text); }
-  .lang-tab.active { background: var(--green-dim); color: var(--green); border: 1px solid var(--border); }
+.lang-tab:hover { color: var(--text); }
+.lang-tab.active { background: var(--green-dim); color: var(--green); border: 1px solid var(--border); }
 
-  .lang-content { display: none; }
-  .lang-content.active { display: block; }
+.lang-content { display: none; }
+.lang-content.active { display: block; }
 
-  .intro-card {
-    background: var(--green-dim);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 40px;
-    font-size: 14px;
-    color: rgba(232,232,240,0.85);
-    line-height: 1.6;
-  }
+.intro-card {
+background: var(--green-dim);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 20px 24px;
+margin-bottom: 40px;
+font-size: 14px;
+color: rgba(232,232,240,0.85);
+line-height: 1.6;
+}
 
-  section { margin-bottom: 40px; }
+section { margin-bottom: 40px; }
 
-  h2 {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border-subtle);
-    text-shadow: 0 0 30px rgba(0,200,150,0.15);
-  }
+h2 {
+font-size: 20px;
+font-weight: 500;
+letter-spacing: -0.02em;
+color: var(--text);
+margin-bottom: 16px;
+padding-bottom: 12px;
+border-bottom: 1px solid var(--border-subtle);
+text-shadow: 0 0 30px rgba(0,200,150,0.15);
+}
 
-  h3 {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--green);
-    font-family: 'DM Mono', monospace;
-    letter-spacing: 0.04em;
-    margin-bottom: 10px;
-    margin-top: 20px;
-  }
+h3 {
+font-size: 13px;
+font-weight: 600;
+color: var(--green);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.04em;
+margin-bottom: 10px;
+margin-top: 20px;
+}
 
-  p { color: rgba(232,232,240,0.8); margin-bottom: 12px; font-size: 14px; }
-  p:last-child { margin-bottom: 0; }
+p { color: rgba(232,232,240,0.8); margin-bottom: 12px; font-size: 14px; }
+p:last-child { margin-bottom: 0; }
 
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 12px;
-  }
+.card {
+background: var(--card-bg);
+border: 1px solid var(--border-subtle);
+border-radius: 12px;
+padding: 20px 24px;
+margin-bottom: 12px;
+}
 
-  .disclaimer {
-    background: rgba(255,180,0,0.06);
-    border: 1px solid rgba(255,180,0,0.2);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 24px;
-  }
+.disclaimer {
+background: rgba(255,180,0,0.06);
+border: 1px solid rgba(255,180,0,0.2);
+border-radius: 12px;
+padding: 20px 24px;
+margin-bottom: 24px;
+}
 
-  .disclaimer-label {
-    font-size: 11px;
-    font-family: 'DM Mono', monospace;
-    color: #FFB400;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    margin-bottom: 8px;
-  }
+.disclaimer-label {
+font-size: 11px;
+font-family: 'DM Mono', monospace;
+color: #FFB400;
+font-weight: 500;
+letter-spacing: 0.08em;
+margin-bottom: 8px;
+}
 
-  .disclaimer p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0; }
-  .disclaimer ul { margin-top: 10px; padding-left: 0; list-style: none; }
-  .disclaimer ul li { font-size: 13px; color: rgba(255,255,255,0.65); padding: 4px 0 4px 16px; position: relative; }
-  .disclaimer ul li::before { content: '·'; position: absolute; left: 0; color: #FFB400; font-weight: 700; }
+.disclaimer p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0; }
+.disclaimer ul { margin-top: 10px; padding-left: 0; list-style: none; }
+.disclaimer ul li { font-size: 13px; color: rgba(255,255,255,0.65); padding: 4px 0 4px 16px; position: relative; }
+.disclaimer ul li::before { content: '·'; position: absolute; left: 0; color: #FFB400; font-weight: 700; }
 
-  ul { list-style: none; padding: 0; }
-  ul li {
-    padding: 6px 0 6px 18px;
-    position: relative;
-    font-size: 14px;
-    color: rgba(232,232,240,0.8);
-    border-bottom: 1px solid var(--border-subtle);
-  }
-  ul li:last-child { border-bottom: none; }
-  ul li::before { content: '·'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+ul { list-style: none; padding: 0; }
+ul li {
+padding: 6px 0 6px 18px;
+position: relative;
+font-size: 14px;
+color: rgba(232,232,240,0.8);
+border-bottom: 1px solid var(--border-subtle);
+}
+ul li:last-child { border-bottom: none; }
+ul li::before { content: '·'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
 
-  .tier-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 16px;
-  }
+.tier-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin-bottom: 16px;
+}
 
-  @media (max-width: 480px) { .tier-row { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .tier-row { grid-template-columns: 1fr; } }
 
-  .tier-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    padding: 16px 20px;
-  }
+.tier-card {
+background: var(--card-bg);
+border: 1px solid var(--border-subtle);
+border-radius: 12px;
+padding: 16px 20px;
+}
 
-  .tier-card.premium { border-color: var(--border); background: var(--green-dim); }
+.tier-card.premium { border-color: var(--border); background: var(--green-dim); }
 
-  .tier-label {
-    font-size: 10px;
-    font-family: 'DM Mono', monospace;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    margin-bottom: 6px;
-  }
+.tier-label {
+font-size: 10px;
+font-family: 'DM Mono', monospace;
+font-weight: 500;
+letter-spacing: 0.06em;
+margin-bottom: 6px;
+}
 
-  .tier-label.free { color: var(--text-secondary); }
-  .tier-label.premium { color: var(--green); }
-  .tier-card h4 { font-size: 14px; font-weight: 500; margin-bottom: 4px; color: var(--text); }
-  .tier-card p { font-size: 12px; margin: 0; }
+.tier-label.free { color: var(--text-secondary); }
+.tier-label.premium { color: var(--green); }
+.tier-card h4 { font-size: 14px; font-weight: 500; margin-bottom: 4px; color: var(--text); }
+.tier-card p { font-size: 12px; margin: 0; }
 
-  .contact-block {
-    background: var(--card-bg);
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    padding: 24px;
-    text-align: center;
-  }
+.contact-block {
+background: var(--card-bg);
+border: 1px solid var(--border-subtle);
+border-radius: 12px;
+padding: 24px;
+text-align: center;
+}
 
-  .contact-block p { margin-bottom: 16px; font-size: 14px; }
+.contact-block p { margin-bottom: 16px; font-size: 14px; }
 
-  .contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--green-dim);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 20px;
-    color: var(--green);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    font-family: 'DM Mono', monospace;
-    transition: all 0.2s;
-  }
+.contact-link {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: var(--green-dim);
+border: 1px solid var(--border);
+border-radius: 8px;
+padding: 10px 20px;
+color: var(--green);
+text-decoration: none;
+font-size: 13px;
+font-weight: 500;
+font-family: 'DM Mono', monospace;
+transition: all 0.2s;
+}
 
-  .contact-link:hover { background: rgba(0,200,150,0.2); box-shadow: 0 0 20px var(--green-glow); }
+.contact-link:hover { background: rgba(0,200,150,0.2); box-shadow: 0 0 20px var(--green-glow); }
 
-  footer {
-    border-top: 1px solid var(--border-subtle);
-    padding: 32px 0 48px;
-    margin-top: 64px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
+footer {
+border-top: 1px solid var(--border-subtle);
+padding: 32px 0 48px;
+margin-top: 64px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 12px;
+}
 
-  footer p { font-size: 12px; color: var(--text-dim); margin: 0; }
-  footer span { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-dim); }
+footer p { font-size: 12px; color: var(--text-dim); margin: 0; }
+footer span { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-dim); }
 </style>
 </head>
 <body>
 <div class="container">
 
-  <header>
-    <div class="logo">
-      <div class="logo-icon">
-        <span>H</span><span>A</span>
-        <span>L</span><span>T</span>
-      </div>
-      <div>
-        <div class="logo-text">HALT Coach</div>
-        <div class="logo-sub">Your AI Recovery Companion</div>
-      </div>
-    </div>
-    <h1 class="page-title">Terms of <em>Use</em></h1>
-    <div class="meta-row">
-      <span class="meta-badge green">Effective: June 2026</span>
-      <span class="meta-badge">Version 1.0</span>
-      <span class="meta-badge">Apple EULA Standard</span>
-    </div>
-  </header>
+<header>
+<div class="logo">
+<div class="logo-icon">
+<span>H</span><span>A</span>
+<span>L</span><span>T</span>
+</div>
+<div>
+<div class="logo-text">HALT Coach</div>
+<div class="logo-sub">Your AI Recovery Companion</div>
+</div>
+</div>
+<h1 class="page-title">Terms of <em>Use</em></h1>
+<div class="meta-row">
+<span class="meta-badge green">Effective: October 2026</span>
+<span class="meta-badge">Version 1.1</span>
+<span class="meta-badge">Apple EULA Standard</span>
+</div>
+</header>
 
-  <div class="lang-tabs" role="tablist">
-    <button class="lang-tab active" onclick="setLang('en')" role="tab">EN</button>
-    <button class="lang-tab" onclick="setLang('pl')" role="tab">PL</button>
-    <button class="lang-tab" onclick="setLang('de')" role="tab">DE</button>
-  </div>
+<div class="lang-tabs" role="tablist">
+<button class="lang-tab active" onclick="setLang('en')" role="tab">EN</button>
+<button class="lang-tab" onclick="setLang('pl')" role="tab">PL</button>
+<button class="lang-tab" onclick="setLang('de')" role="tab">DE</button>
+</div>
 
-  <!-- ===== ENGLISH ===== -->
-  <div class="lang-content active" id="lang-en">
+<!-- ===== ENGLISH ===== -->
+<div class="lang-content active" id="lang-en">
 
-    <div class="intro-card">
-      <strong>The short version:</strong> By using <strong>HALT Coach</strong>, you agree to these terms. This app is a self-help support tool for adults (18+) in addiction aftercare — not a medical service. One subscription plan, managed by Apple, with all your data staying 100% local on your device.
-    </div>
+<div class="intro-card">
+<strong>The short version:</strong> By using <strong>HALT Coach</strong>, you agree to these terms. This app is a self-help support tool for adults (18+) in addiction aftercare — not a medical service. One subscription plan, managed by Apple, and your conversation history stays on your device.
+</div>
 
-    <section>
-      <h2>Agreement to Terms</h2>
-      <p><strong>HALT Coach</strong> ("the App", "we", "us") provides an iOS application designed to support people who have completed addiction recovery programs. By downloading or using the App, you agree to these Terms of Use and our Privacy Policy.</p>
-      <div class="card">
-        <p><strong>Age Requirement:</strong> The App is intended exclusively for users aged <strong>18 and older</strong>. By using HALT Coach, you confirm that you are at least 18 years of age. The App is not designed for or directed toward minors.</p>
-      </div>
-    </section>
+<section>
+<h2>Agreement to Terms</h2>
+<p><strong>HALT Coach</strong> ("the App", "we", "us") provides an iOS application designed to support people who have completed addiction recovery programs. By downloading or using the App, you agree to these Terms of Use and our Privacy Policy.</p>
+<div class="card">
+<p><strong>Age Requirement:</strong> The App is intended exclusively for users aged <strong>18 and older</strong>. By using HALT Coach, you confirm that you are at least 18 years of age. The App is not designed for or directed toward minors.</p>
+</div>
+</section>
 
-    <section>
-      <h2>Medical Disclaimer</h2>
-      <div class="disclaimer">
-        <div class="disclaimer-label">⚠ NOT A MEDICAL SERVICE</div>
-        <p>HALT Coach uses AI to provide supportive conversations for people in addiction aftercare. It is <strong>not a medical device</strong> and does not provide clinical diagnosis, therapy, or treatment.</p>
-        <ul>
-          <li>The AI (Claude) can make mistakes and is not a substitute for a human professional.</li>
-          <li>Do not ignore professional medical advice because of something the app suggests.</li>
-          <li>This app is designed to complement — not replace — professional aftercare support.</li>
-          <li><strong>Emergency:</strong> If you are thinking about self-harm or are in a crisis, contact your local emergency services or a mental health crisis helpline immediately.</li>
-        </ul>
-      </div>
-    </section>
+<section>
+<h2>Medical Disclaimer</h2>
+<div class="disclaimer">
+<div class="disclaimer-label">⚠ NOT A MEDICAL SERVICE</div>
+<p>HALT Coach uses AI to provide supportive conversations for people in addiction aftercare. It is <strong>not a medical device</strong> and does not provide clinical diagnosis, therapy, or treatment.</p>
+<ul>
+<li>The AI (Claude) can make mistakes and is not a substitute for a human professional.</li>
+<li>Do not ignore professional medical advice because of something the app suggests.</li>
+<li>This app is designed to complement — not replace — professional aftercare support.</li>
+<li><strong>Emergency:</strong> If you are thinking about self-harm or are in a crisis, contact your local emergency services or a mental health crisis helpline immediately.</li>
+</ul>
+</div>
+</section>
 
-    <section>
-      <h2>Subscription & Usage</h2>
-      <div class="tier-row">
-        <div class="tier-card">
-          <div class="tier-label free">FREE PLAN</div>
-          <h4>Limited Access</h4>
-          <p>3 sessions/week. First 14 days on Sonnet, then Haiku. No Voice AI. 5x Craving SOS/month.</p>
-        </div>
-        <div class="tier-card premium">
-          <div class="tier-label premium">PREMIUM · $29.99/mo</div>
-          <h4>Full Access</h4>
-          <p>Unlimited sessions (Standard, Deep, Open Coach), Voice AI, Craving SOS 24/7, HALT charts, AI memory. Always on Sonnet.</p>
-        </div>
-      </div>
+<section>
+<h2>Subscription & Usage</h2>
+<div class="tier-row">
+<div class="tier-card">
+<div class="tier-label free">FREE PLAN</div>
+<h4>Limited Access</h4>
+<p>3 sessions/week. First 14 days on Sonnet, then Haiku. No Voice AI. 5x Craving SOS/month.</p>
+</div>
+<div class="tier-card premium">
+<div class="tier-label premium">PREMIUM · $29.99/mo</div>
+<h4>Full Access</h4>
+<p>Unlimited sessions (Standard, Deep, Open Coach), Voice AI, Craving SOS 24/7, HALT charts, AI memory. Always on Sonnet.</p>
+</div>
+</div>
 
-      <h3>Billing & Cancellation</h3>
-      <div class="card">
-        <ul>
-          <li><strong>Payments:</strong> Charged to your Apple ID at confirmation of purchase via StoreKit.</li>
-          <li><strong>Auto-renewal:</strong> Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period.</li>
-          <li><strong>Cancellation:</strong> Cancel anytime via App Store → Account → Subscriptions.</li>
-          <li><strong>Local data:</strong> All session data is stored locally. Uninstalling the app permanently deletes all your history.</li>
-        </ul>
-      </div>
+<h3>Billing & Cancellation</h3>
+<div class="card">
+<ul>
+<li><strong>Payments:</strong> Charged to your Apple ID at confirmation of purchase via StoreKit.</li>
+<li><strong>Auto-renewal:</strong> Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period.</li>
+<li><strong>Cancellation:</strong> Cancel anytime via App Store → Account → Subscriptions.</li>
+<li><strong>Local data:</strong> Your session history is stored on your device. Uninstalling the app permanently deletes it.</li>
+</ul>
+</div>
 
-      <h3>Fair Usage</h3>
-      <p>While sessions are unlimited for Premium subscribers, we reserve the right to limit access if patterns suggest automated (non-human) activity or abuse of the service.</p>
-    </section>
+<h3>Fair Usage</h3>
+<p>While sessions are unlimited for Premium subscribers, we reserve the right to limit access if patterns suggest automated (non-human) activity or abuse of the service.</p>
+</section>
 
-    <section>
-      <h2>License & Restrictions</h2>
-      <p>We grant you a personal, non-transferable license to use the App for personal, non-commercial purposes. You agree not to:</p>
-      <div class="card">
-        <ul>
-          <li>Copy, modify, or reverse engineer the application.</li>
-          <li>Use the AI coaching for any illegal or harmful purposes.</li>
-          <li>Bypass any session limits or security features.</li>
-          <li>Share your subscription access with other users.</li>
-        </ul>
-      </div>
-    </section>
+<section>
+<h2>License & Restrictions</h2>
+<p>We grant you a personal, non-transferable license to use the App for personal, non-commercial purposes. You agree not to:</p>
+<div class="card">
+<ul>
+<li>Copy, modify, or reverse engineer the application.</li>
+<li>Use the AI coaching for any illegal or harmful purposes.</li>
+<li>Bypass any session limits or security features.</li>
+<li>Share your subscription access with other users.</li>
+</ul>
+</div>
+</section>
 
-    <section>
-      <h2>Privacy & Data</h2>
-      <p>Your privacy is paramount. All conversations and session data stay exclusively on your device — we have no servers storing your personal data. The only external connection is to Anthropic's Claude API to generate AI responses. Full details in our <a href="https://moodshift-coach.github.io/HALTCoach-Privacy-Policy/" style="color:var(--green)">Privacy Policy</a>.</p>
-    </section>
+<section>
+<h2>Privacy & Data</h2>
+<p>Your privacy matters. Your conversation history and check-ins stay on your device. To generate AI replies, your messages are relayed through our backend (hosted on Cloudflare) to Anthropic's Claude API; we do not store or log their content. We also keep an anonymous device identifier and usage counters to enforce plan limits, and Apple verifies your subscription. Full details in our <a href="https://moodshift-coach.github.io/HALTCoach-Privacy-Policy/" style="color:var(--green)">Privacy Policy</a>.</p>
+</section>
 
-    <section>
-      <h2>Limitation of Liability</h2>
-      <p>HALT Coach is provided "as is". To the maximum extent permitted by law, we shall not be liable for any damages arising from your use of the App, including reliance on AI-generated responses or loss of locally stored data.</p>
-    </section>
+<section>
+<h2>Limitation of Liability</h2>
+<p>HALT Coach is provided "as is". To the maximum extent permitted by law, we shall not be liable for any damages arising from your use of the App, including reliance on AI-generated responses or loss of locally stored data.</p>
+</section>
 
-    <section>
-      <h2>Changes to Terms</h2>
-      <p>We may update these Terms to reflect new features or legal requirements. Continued use of the App after an update constitutes your acceptance of the new Terms. For significant changes, we will provide notice within the App.</p>
-    </section>
+<section>
+<h2>Changes to Terms</h2>
+<p>We may update these Terms to reflect new features or legal requirements. Continued use of the App after an update constitutes your acceptance of the new Terms. For significant changes, we will provide notice within the App.</p>
+</section>
 
-    <section>
-      <h2>Questions?</h2>
-      <div class="contact-block">
-        <p>Questions about these Terms? Reach out directly.</p>
-        <a href="mailto:haltcoach.app@gmail.com" class="contact-link">✉ haltcoach.app@gmail.com</a>
-      </div>
-    </section>
+<section>
+<h2>Questions?</h2>
+<div class="contact-block">
+<p>Questions about these Terms? Reach out directly.</p>
+<a href="mailto:haltcoach.app@gmail.com" class="contact-link">✉ haltcoach.app@gmail.com</a>
+</div>
+</section>
 
-  </div>
+</div>
 
-  <!-- ===== POLISH ===== -->
-  <div class="lang-content" id="lang-pl">
+<!-- ===== POLISH ===== -->
+<div class="lang-content" id="lang-pl">
 
-    <div class="intro-card">
-      <strong>Krótka wersja:</strong> Korzystając z <strong>HALT Coach</strong>, wyrażasz zgodę na poniższe warunki. Aplikacja jest narzędziem wsparcia dla dorosłych (18+) po zakończeniu terapii uzależnień — nie jest usługą medyczną. Jeden plan subskrypcji, obsługiwany przez Apple, a wszystkie Twoje dane pozostają w 100% lokalnie na Twoim urządzeniu.
-    </div>
+<div class="intro-card">
+<strong>Krótka wersja:</strong> Korzystając z <strong>HALT Coach</strong>, wyrażasz zgodę na poniższe warunki. Aplikacja jest narzędziem wsparcia dla dorosłych (18+) po zakończeniu terapii uzależnień — nie jest usługą medyczną. Jeden plan subskrypcji, obsługiwany przez Apple, a historia Twoich rozmów pozostaje na Twoim urządzeniu.
+</div>
 
-    <section>
-      <h2>Akceptacja Warunków</h2>
-      <p><strong>HALT Coach</strong> („Aplikacja", „my") udostępnia aplikację iOS zaprojektowaną dla osób, które ukończyły programy terapii uzależnień. Pobierając lub używając Aplikacji, wyrażasz zgodę na niniejsze Warunki Użytkowania oraz Politykę Prywatności.</p>
-      <div class="card">
-        <p><strong>Wymóg wieku:</strong> Aplikacja jest przeznaczona wyłącznie dla użytkowników w wieku <strong>18 lat i starszych</strong>. Korzystając z HALT Coach, potwierdzasz, że masz co najmniej 18 lat. Aplikacja nie jest przeznaczona dla osób niepełnoletnich.</p>
-      </div>
-    </section>
+<section>
+<h2>Akceptacja Warunków</h2>
+<p><strong>HALT Coach</strong> („Aplikacja", „my") udostępnia aplikację iOS zaprojektowaną dla osób, które ukończyły programy terapii uzależnień. Pobierając lub używając Aplikacji, wyrażasz zgodę na niniejsze Warunki Użytkowania oraz Politykę Prywatności.</p>
+<div class="card">
+<p><strong>Wymóg wieku:</strong> Aplikacja jest przeznaczona wyłącznie dla użytkowników w wieku <strong>18 lat i starszych</strong>. Korzystając z HALT Coach, potwierdzasz, że masz co najmniej 18 lat. Aplikacja nie jest przeznaczona dla osób niepełnoletnich.</p>
+</div>
+</section>
 
-    <section>
-      <h2>Zastrzeżenie Medyczne</h2>
-      <div class="disclaimer">
-        <div class="disclaimer-label">⚠ NIE JEST TO USŁUGA MEDYCZNA</div>
-        <p>HALT Coach używa AI do prowadzenia wspierających rozmów dla osób po terapii uzależnień. <strong>Nie jest urządzeniem medycznym</strong> i nie świadczy klinicznej diagnozy, terapii ani leczenia.</p>
-        <ul>
-          <li>AI (Claude) może popełniać błędy i nie zastępuje specjalisty.</li>
-          <li>Nie ignoruj profesjonalnych porad medycznych na podstawie sugestii aplikacji.</li>
-          <li>Aplikacja jest uzupełnieniem — nie zastępnikiem — profesjonalnego wsparcia po terapii.</li>
-          <li><strong>Nagła potrzeba:</strong> Jeśli masz myśli samobójcze lub jesteś w kryzysie, natychmiast skontaktuj się ze służbami ratunkowymi lub telefonem zaufania.</li>
-        </ul>
-      </div>
-    </section>
+<section>
+<h2>Zastrzeżenie Medyczne</h2>
+<div class="disclaimer">
+<div class="disclaimer-label">⚠ NIE JEST TO USŁUGA MEDYCZNA</div>
+<p>HALT Coach używa AI do prowadzenia wspierających rozmów dla osób po terapii uzależnień. <strong>Nie jest urządzeniem medycznym</strong> i nie świadczy klinicznej diagnozy, terapii ani leczenia.</p>
+<ul>
+<li>AI (Claude) może popełniać błędy i nie zastępuje specjalisty.</li>
+<li>Nie ignoruj profesjonalnych porad medycznych na podstawie sugestii aplikacji.</li>
+<li>Aplikacja jest uzupełnieniem — nie zastępnikiem — profesjonalnego wsparcia po terapii.</li>
+<li><strong>Nagła potrzeba:</strong> Jeśli masz myśli samobójcze lub jesteś w kryzysie, natychmiast skontaktuj się ze służbami ratunkowymi lub telefonem zaufania.</li>
+</ul>
+</div>
+</section>
 
-    <section>
-      <h2>Subskrypcja i Użytkowanie</h2>
-      <div class="tier-row">
-        <div class="tier-card">
-          <div class="tier-label free">PLAN BEZPŁATNY</div>
-          <h4>Ograniczony Dostęp</h4>
-          <p>3 sesje/tydzień. Pierwsze 14 dni na Sonnet, potem Haiku. Bez Voice AI. 5x Craving SOS/miesiąc.</p>
-        </div>
-        <div class="tier-card premium">
-          <div class="tier-label premium">PREMIUM · $29.99/mies.</div>
-          <h4>Pełny Dostęp</h4>
-          <p>Nieograniczone sesje (Standardowa, Deep, Open Coach), Voice AI, Craving SOS 24/7, wykresy HALT, pamięć AI. Zawsze na Sonnet.</p>
-        </div>
-      </div>
+<section>
+<h2>Subskrypcja i Użytkowanie</h2>
+<div class="tier-row">
+<div class="tier-card">
+<div class="tier-label free">PLAN BEZPŁATNY</div>
+<h4>Ograniczony Dostęp</h4>
+<p>3 sesje/tydzień. Pierwsze 14 dni na Sonnet, potem Haiku. Bez Voice AI. 5x Craving SOS/miesiąc.</p>
+</div>
+<div class="tier-card premium">
+<div class="tier-label premium">PREMIUM · $29.99/mies.</div>
+<h4>Pełny Dostęp</h4>
+<p>Nieograniczone sesje (Standardowa, Deep, Open Coach), Voice AI, Craving SOS 24/7, wykresy HALT, pamięć AI. Zawsze na Sonnet.</p>
+</div>
+</div>
 
-      <h3>Płatności i Anulowanie</h3>
-      <div class="card">
-        <ul>
-          <li><strong>Płatności:</strong> Pobierane z konta Apple ID przez StoreKit w momencie potwierdzenia zakupu.</li>
-          <li><strong>Automatyczne odnowienie:</strong> Subskrypcje odnawiają się automatycznie, chyba że zostaną anulowane co najmniej 24 godziny przed końcem okresu.</li>
-          <li><strong>Anulowanie:</strong> Anuluj w dowolnym momencie przez App Store → Konto → Subskrypcje.</li>
-          <li><strong>Dane lokalne:</strong> Wszystkie dane sesji są przechowywane lokalnie. Odinstalowanie aplikacji trwale usuwa całą historię.</li>
-        </ul>
-      </div>
+<h3>Płatności i Anulowanie</h3>
+<div class="card">
+<ul>
+<li><strong>Płatności:</strong> Pobierane z konta Apple ID przez StoreKit w momencie potwierdzenia zakupu.</li>
+<li><strong>Automatyczne odnowienie:</strong> Subskrypcje odnawiają się automatycznie, chyba że zostaną anulowane co najmniej 24 godziny przed końcem okresu.</li>
+<li><strong>Anulowanie:</strong> Anuluj w dowolnym momencie przez App Store → Konto → Subskrypcje.</li>
+<li><strong>Dane lokalne:</strong> Historia sesji jest przechowywana na Twoim urządzeniu. Odinstalowanie aplikacji trwale ją usuwa.</li>
+</ul>
+</div>
 
-      <h3>Uczciwe Użytkowanie</h3>
-      <p>Mimo że sesje są nieograniczone dla subskrybentów Premium, zastrzegamy sobie prawo do ograniczenia dostępu, jeśli wzorce sugerują zautomatyzowaną aktywność lub nadużywanie usługi.</p>
-    </section>
+<h3>Uczciwe Użytkowanie</h3>
+<p>Mimo że sesje są nieograniczone dla subskrybentów Premium, zastrzegamy sobie prawo do ograniczenia dostępu, jeśli wzorce sugerują zautomatyzowaną aktywność lub nadużywanie usługi.</p>
+</section>
 
-    <section>
-      <h2>Licencja i Ograniczenia</h2>
-      <p>Udzielamy Ci osobistej, niezbywalnej licencji na korzystanie z Aplikacji w celach osobistych i niekomercyjnych. Zgadzasz się nie:</p>
-      <div class="card">
-        <ul>
-          <li>Kopiować, modyfikować ani dekompilować aplikacji.</li>
-          <li>Używać coachingu AI do celów nielegalnych lub szkodliwych.</li>
-          <li>Omijać limitów sesji ani zabezpieczeń aplikacji.</li>
-          <li>Udostępniać dostępu do subskrypcji innym użytkownikom.</li>
-        </ul>
-      </div>
-    </section>
+<section>
+<h2>Licencja i Ograniczenia</h2>
+<p>Udzielamy Ci osobistej, niezbywalnej licencji na korzystanie z Aplikacji w celach osobistych i niekomercyjnych. Zgadzasz się nie:</p>
+<div class="card">
+<ul>
+<li>Kopiować, modyfikować ani dekompilować aplikacji.</li>
+<li>Używać coachingu AI do celów nielegalnych lub szkodliwych.</li>
+<li>Omijać limitów sesji ani zabezpieczeń aplikacji.</li>
+<li>Udostępniać dostępu do subskrypcji innym użytkownikom.</li>
+</ul>
+</div>
+</section>
 
-    <section>
-      <h2>Prywatność i Dane</h2>
-      <p>Twoja prywatność jest priorytetem. Wszystkie rozmowy i dane sesji pozostają wyłącznie na Twoim urządzeniu — nie posiadamy serwerów przechowujących Twoje dane osobowe. Jedyne zewnętrzne połączenie to Claude API Anthropic do generowania odpowiedzi AI. Szczegóły w naszej <a href="https://moodshift-coach.github.io/HALTCoach-Privacy-Policy/" style="color:var(--green)">Polityce Prywatności</a>.</p>
-    </section>
+<section>
+<h2>Prywatność i Dane</h2>
+<p>Twoja prywatność jest ważna. Historia rozmów i check-iny pozostają na Twoim urządzeniu. Aby wygenerować odpowiedzi AI, Twoje wiadomości są przekazywane przez nasz backend (hostowany w Cloudflare) do Claude API firmy Anthropic; nie przechowujemy ani nie rejestrujemy ich treści. Przechowujemy także anonimowy identyfikator urządzenia i liczniki użycia, aby egzekwować limity planu, a subskrypcję weryfikuje Apple. Szczegóły w naszej <a href="https://moodshift-coach.github.io/HALTCoach-Privacy-Policy/" style="color:var(--green)">Polityce Prywatności</a>.</p>
+</section>
 
-    <section>
-      <h2>Ograniczenie Odpowiedzialności</h2>
-      <p>HALT Coach jest udostępniany „w stanie takim, w jakim jest". W maksymalnym zakresie dozwolonym przez prawo nie ponosimy odpowiedzialności za szkody wynikające z korzystania z Aplikacji, w tym za poleganie na odpowiedziach AI lub utratę lokalnie przechowywanych danych.</p>
-    </section>
+<section>
+<h2>Ograniczenie Odpowiedzialności</h2>
+<p>HALT Coach jest udostępniany „w stanie takim, w jakim jest". W maksymalnym zakresie dozwolonym przez prawo nie ponosimy odpowiedzialności za szkody wynikające z korzystania z Aplikacji, w tym za poleganie na odpowiedziach AI lub utratę lokalnie przechowywanych danych.</p>
+</section>
 
-    <section>
-      <h2>Zmiany Warunków</h2>
-      <p>Możemy aktualizować niniejsze Warunki, aby odzwierciedlić nowe funkcje lub wymogi prawne. Dalsze korzystanie z Aplikacji po aktualizacji oznacza akceptację nowych Warunków. W przypadku istotnych zmian poinformujemy Cię w Aplikacji.</p>
-    </section>
+<section>
+<h2>Zmiany Warunków</h2>
+<p>Możemy aktualizować niniejsze Warunki, aby odzwierciedlić nowe funkcje lub wymogi prawne. Dalsze korzystanie z Aplikacji po aktualizacji oznacza akceptację nowych Warunków. W przypadku istotnych zmian poinformujemy Cię w Aplikacji.</p>
+</section>
 
-    <section>
-      <h2>Pytania?</h2>
-      <div class="contact-block">
-        <p>Masz pytania dotyczące tych Warunków? Napisz bezpośrednio.</p>
-        <a href="mailto:haltcoach.app@gmail.com" class="contact-link">✉ haltcoach.app@gmail.com</a>
-      </div>
-    </section>
+<section>
+<h2>Pytania?</h2>
+<div class="contact-block">
+<p>Masz pytania dotyczące tych Warunków? Napisz bezpośrednio.</p>
+<a href="mailto:haltcoach.app@gmail.com" class="contact-link">✉ haltcoach.app@gmail.com</a>
+</div>
+</section>
 
-  </div>
+</div>
 
-  <!-- ===== GERMAN ===== -->
-  <div class="lang-content" id="lang-de">
+<!-- ===== GERMAN ===== -->
+<div class="lang-content" id="lang-de">
 
-    <div class="intro-card">
-      <strong>Kurzfassung:</strong> Durch die Nutzung von <strong>HALT Coach</strong> stimmst du diesen Bedingungen zu. Diese App ist ein Selbsthilfe-Tool für Erwachsene (18+) in der Sucht-Nachsorge — kein medizinischer Dienst. Ein Abonnementplan, verwaltet über Apple, mit allen Daten 100% lokal auf deinem Gerät.
-    </div>
+<div class="intro-card">
+<strong>Kurzfassung:</strong> Durch die Nutzung von <strong>HALT Coach</strong> stimmst du diesen Bedingungen zu. Diese App ist ein Selbsthilfe-Tool für Erwachsene (18+) in der Sucht-Nachsorge — kein medizinischer Dienst. Ein Abonnementplan, verwaltet über Apple, und dein Gesprächsverlauf bleibt auf deinem Gerät.
+</div>
 
-    <section>
-      <h2>Zustimmung zu den Bedingungen</h2>
-      <p><strong>HALT Coach</strong> („die App", „wir") stellt eine iOS-Anwendung für Menschen bereit, die Suchtbehandlungsprogramme abgeschlossen haben. Durch das Herunterladen oder die Nutzung der App stimmst du diesen Nutzungsbedingungen und unserer Datenschutzerklärung zu.</p>
-      <div class="card">
-        <p><strong>Altersanforderung:</strong> Die App richtet sich ausschließlich an Nutzer ab <strong>18 Jahren</strong>. Durch die Nutzung von HALT Coach bestätigst du, dass du mindestens 18 Jahre alt bist. Die App ist nicht für Minderjährige konzipiert.</p>
-      </div>
-    </section>
+<section>
+<h2>Zustimmung zu den Bedingungen</h2>
+<p><strong>HALT Coach</strong> („die App", „wir") stellt eine iOS-Anwendung für Menschen bereit, die Suchtbehandlungsprogramme abgeschlossen haben. Durch das Herunterladen oder die Nutzung der App stimmst du diesen Nutzungsbedingungen und unserer Datenschutzerklärung zu.</p>
+<div class="card">
+<p><strong>Altersanforderung:</strong> Die App richtet sich ausschließlich an Nutzer ab <strong>18 Jahren</strong>. Durch die Nutzung von HALT Coach bestätigst du, dass du mindestens 18 Jahre alt bist. Die App ist nicht für Minderjährige konzipiert.</p>
+</div>
+</section>
 
-    <section>
-      <h2>Medizinischer Haftungsausschluss</h2>
-      <div class="disclaimer">
-        <div class="disclaimer-label">⚠ KEIN MEDIZINISCHER DIENST</div>
-        <p>HALT Coach nutzt KI für unterstützende Gespräche in der Sucht-Nachsorge. Es handelt sich <strong>nicht um ein Medizinprodukt</strong> und bietet keine klinische Diagnose, Therapie oder Behandlung.</p>
-        <ul>
-          <li>Die KI (Claude) kann Fehler machen und ist kein Ersatz für einen Fachmann.</li>
-          <li>Ignoriere keine professionellen medizinischen Ratschläge aufgrund von App-Vorschlägen.</li>
-          <li>Die App ergänzt — ersetzt nicht — professionelle Nachsorgeunterstützung.</li>
-          <li><strong>Notfall:</strong> Bei Gedanken an Selbstverletzung oder in einer Krise wende dich sofort an den Notruf oder eine Krisenhotline.</li>
-        </ul>
-      </div>
-    </section>
+<section>
+<h2>Medizinischer Haftungsausschluss</h2>
+<div class="disclaimer">
+<div class="disclaimer-label">⚠ KEIN MEDIZINISCHER DIENST</div>
+<p>HALT Coach nutzt KI für unterstützende Gespräche in der Sucht-Nachsorge. Es handelt sich <strong>nicht um ein Medizinprodukt</strong> und bietet keine klinische Diagnose, Therapie oder Behandlung.</p>
+<ul>
+<li>Die KI (Claude) kann Fehler machen und ist kein Ersatz für einen Fachmann.</li>
+<li>Ignoriere keine professionellen medizinischen Ratschläge aufgrund von App-Vorschlägen.</li>
+<li>Die App ergänzt — ersetzt nicht — professionelle Nachsorgeunterstützung.</li>
+<li><strong>Notfall:</strong> Bei Gedanken an Selbstverletzung oder in einer Krise wende dich sofort an den Notruf oder eine Krisenhotline.</li>
+</ul>
+</div>
+</section>
 
-    <section>
-      <h2>Abonnement & Nutzung</h2>
-      <div class="tier-row">
-        <div class="tier-card">
-          <div class="tier-label free">KOSTENLOSER PLAN</div>
-          <h4>Eingeschränkter Zugang</h4>
-          <p>3 Sitzungen/Woche. Erste 14 Tage Sonnet, danach Haiku. Kein Voice AI. 5x Craving SOS/Monat.</p>
-        </div>
-        <div class="tier-card premium">
-          <div class="tier-label premium">PREMIUM · $29,99/Mon.</div>
-          <h4>Vollzugang</h4>
-          <p>Unbegrenzte Sitzungen (Standard, Deep, Open Coach), Voice AI, Craving SOS 24/7, HALT-Charts, KI-Gedächtnis. Immer Sonnet.</p>
-        </div>
-      </div>
+<section>
+<h2>Abonnement & Nutzung</h2>
+<div class="tier-row">
+<div class="tier-card">
+<div class="tier-label free">KOSTENLOSER PLAN</div>
+<h4>Eingeschränkter Zugang</h4>
+<p>3 Sitzungen/Woche. Erste 14 Tage Sonnet, danach Haiku. Kein Voice AI. 5x Craving SOS/Monat.</p>
+</div>
+<div class="tier-card premium">
+<div class="tier-label premium">PREMIUM · $29,99/Mon.</div>
+<h4>Vollzugang</h4>
+<p>Unbegrenzte Sitzungen (Standard, Deep, Open Coach), Voice AI, Craving SOS 24/7, HALT-Charts, KI-Gedächtnis. Immer Sonnet.</p>
+</div>
+</div>
 
-      <h3>Abrechnung & Kündigung</h3>
-      <div class="card">
-        <ul>
-          <li><strong>Zahlungen:</strong> Bei Kaufbestätigung über StoreKit deiner Apple-ID in Rechnung gestellt.</li>
-          <li><strong>Automatische Verlängerung:</strong> Abonnements verlängern sich automatisch, sofern nicht mindestens 24 Stunden vor Ende des Zeitraums gekündigt.</li>
-          <li><strong>Kündigung:</strong> Jederzeit über App Store → Konto → Abonnements kündbar.</li>
-          <li><strong>Lokale Daten:</strong> Alle Sitzungsdaten werden lokal gespeichert. Die Deinstallation löscht alles dauerhaft.</li>
-        </ul>
-      </div>
+<h3>Abrechnung & Kündigung</h3>
+<div class="card">
+<ul>
+<li><strong>Zahlungen:</strong> Bei Kaufbestätigung über StoreKit deiner Apple-ID in Rechnung gestellt.</li>
+<li><strong>Automatische Verlängerung:</strong> Abonnements verlängern sich automatisch, sofern nicht mindestens 24 Stunden vor Ende des Zeitraums gekündigt.</li>
+<li><strong>Kündigung:</strong> Jederzeit über App Store → Konto → Abonnements kündbar.</li>
+<li><strong>Lokale Daten:</strong> Dein Sitzungsverlauf wird auf deinem Gerät gespeichert. Die Deinstallation löscht ihn dauerhaft.</li>
+</ul>
+</div>
 
-      <h3>Fair Use</h3>
-      <p>Obwohl Sitzungen für Premium-Abonnenten unbegrenzt sind, behalten wir uns das Recht vor, den Zugang bei automatisierten Aktivitäten oder Missbrauch zu beschränken.</p>
-    </section>
+<h3>Fair Use</h3>
+<p>Obwohl Sitzungen für Premium-Abonnenten unbegrenzt sind, behalten wir uns das Recht vor, den Zugang bei automatisierten Aktivitäten oder Missbrauch zu beschränken.</p>
+</section>
 
-    <section>
-      <h2>Lizenz & Einschränkungen</h2>
-      <p>Wir gewähren dir eine persönliche, nicht übertragbare Lizenz zur privaten, nicht-kommerziellen Nutzung. Du verpflichtest dich, Folgendes zu unterlassen:</p>
-      <div class="card">
-        <ul>
-          <li>Kopieren, Modifizieren oder Reverse Engineering der Anwendung.</li>
-          <li>Nutzung des KI-Coachings für illegale oder schädliche Zwecke.</li>
-          <li>Umgehung von Sitzungslimits oder Sicherheitsfunktionen.</li>
-          <li>Weitergabe des Abonnementzugangs an andere Nutzer.</li>
-        </ul>
-      </div>
-    </section>
+<section>
+<h2>Lizenz & Einschränkungen</h2>
+<p>Wir gewähren dir eine persönliche, nicht übertragbare Lizenz zur privaten, nicht-kommerziellen Nutzung. Du verpflichtest dich, Folgendes zu unterlassen:</p>
+<div class="card">
+<ul>
+<li>Kopieren, Modifizieren oder Reverse Engineering der Anwendung.</li>
+<li>Nutzung des KI-Coachings für illegale oder schädliche Zwecke.</li>
+<li>Umgehung von Sitzungslimits oder Sicherheitsfunktionen.</li>
+<li>Weitergabe des Abonnementzugangs an andere Nutzer.</li>
+</ul>
+</div>
+</section>
 
-    <section>
-      <h2>Datenschutz & Daten</h2>
-      <p>Dein Datenschutz hat höchste Priorität. Alle Gespräche und Sitzungsdaten verbleiben ausschließlich auf deinem Gerät — wir haben keine Server für persönliche Daten. Die einzige externe Verbindung ist Anthropics Claude API. Details in unserer <a href="https://moodshift-coach.github.io/HALTCoach-Privacy-Policy/" style="color:var(--green)">Datenschutzerklärung</a>.</p>
-    </section>
+<section>
+<h2>Datenschutz & Daten</h2>
+<p>Dein Datenschutz ist uns wichtig. Dein Gesprächsverlauf und deine Check-ins bleiben auf deinem Gerät. Um KI-Antworten zu erzeugen, werden deine Nachrichten über unser Backend (gehostet bei Cloudflare) an die Claude API von Anthropic weitergeleitet; ihren Inhalt speichern oder protokollieren wir nicht. Außerdem speichern wir eine anonyme Geräte-ID und Nutzungszähler, um Planlimits durchzusetzen, und Apple prüft dein Abonnement. Details in unserer <a href="https://moodshift-coach.github.io/HALTCoach-Privacy-Policy/" style="color:var(--green)">Datenschutzerklärung</a>.</p>
+</section>
 
-    <section>
-      <h2>Haftungsbeschränkung</h2>
-      <p>HALT Coach wird „wie besehen" bereitgestellt. Im maximal gesetzlich zulässigen Umfang haften wir nicht für Schäden aus der App-Nutzung, einschließlich des Vertrauens auf KI-Antworten oder Datenverlust.</p>
-    </section>
+<section>
+<h2>Haftungsbeschränkung</h2>
+<p>HALT Coach wird „wie besehen" bereitgestellt. Im maximal gesetzlich zulässigen Umfang haften wir nicht für Schäden aus der App-Nutzung, einschließlich des Vertrauens auf KI-Antworten oder Datenverlust.</p>
+</section>
 
-    <section>
-      <h2>Änderungen der Bedingungen</h2>
-      <p>Wir können diese Bedingungen aktualisieren. Die weitere Nutzung nach einer Aktualisierung gilt als Zustimmung. Bei wesentlichen Änderungen informieren wir dich in der App.</p>
-    </section>
+<section>
+<h2>Änderungen der Bedingungen</h2>
+<p>Wir können diese Bedingungen aktualisieren. Die weitere Nutzung nach einer Aktualisierung gilt als Zustimmung. Bei wesentlichen Änderungen informieren wir dich in der App.</p>
+</section>
 
-    <section>
-      <h2>Fragen?</h2>
-      <div class="contact-block">
-        <p>Fragen zu diesen Bedingungen? Schreib uns direkt.</p>
-        <a href="mailto:haltcoach.app@gmail.com" class="contact-link">✉ haltcoach.app@gmail.com</a>
-      </div>
-    </section>
+<section>
+<h2>Fragen?</h2>
+<div class="contact-block">
+<p>Fragen zu diesen Bedingungen? Schreib uns direkt.</p>
+<a href="mailto:haltcoach.app@gmail.com" class="contact-link">✉ haltcoach.app@gmail.com</a>
+</div>
+</section>
 
-  </div>
+</div>
 
-  <footer>
-    <p>© 2026 HALT Coach · Michał Karczewski · Privacy by Design</p>
-    <span>v1.0 · June 2026</span>
-  </footer>
+<footer>
+<p>© 2026 HALT Coach · Michał Karczewski · Privacy by Design</p>
+<span>v1.1 · October 2026</span>
+</footer>
 
 </div>
 
 <script>
-  function setLang(lang) {
-    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => {
-      el.classList.remove('active');
-      el.setAttribute('aria-selected', 'false');
-    });
-    document.getElementById('lang-' + lang).classList.add('active');
-    const tabs = document.querySelectorAll('.lang-tab');
-    const idx = ['en','pl','de'].indexOf(lang);
-    tabs[idx].classList.add('active');
-    tabs[idx].setAttribute('aria-selected', 'true');
-    document.documentElement.lang = lang;
-  }
+function setLang(lang) {
+document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+document.querySelectorAll('.lang-tab').forEach(el => {
+el.classList.remove('active');
+el.setAttribute('aria-selected', 'false');
+});
+document.getElementById('lang-' + lang).classList.add('active');
+const tabs = document.querySelectorAll('.lang-tab');
+const idx = ['en','pl','de'].indexOf(lang);
+tabs[idx].classList.add('active');
+tabs[idx].setAttribute('aria-selected', 'true');
+document.documentElement.lang = lang;
+}
 </script>
 
 </body>
